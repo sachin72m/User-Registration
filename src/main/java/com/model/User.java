@@ -6,10 +6,7 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-/**
- * Entity representing a user.
- * This will map to a table in the database.
- */
+
 @Entity
 @Table(name = "users") // Specify a different table name to avoid conflict with reserved keywords
 public class User {

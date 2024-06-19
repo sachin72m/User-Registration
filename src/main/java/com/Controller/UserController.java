@@ -13,9 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.Optional;
 
-/**
- * REST controller for user-related endpoints.
- */
+
 @RestController
 @RequestMapping("/api/user")
 public class UserController {
@@ -23,12 +21,7 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    /**
-     * Endpoint to register a new user.
-     *
-     * @param user User object containing the user's details.
-     * @return ResponseEntity indicating the result of the registration process.
-     */
+    
     @PostMapping("/register")
     public ResponseEntity<String> registerUser(@RequestBody User user) {
         try {
@@ -39,12 +32,7 @@ public class UserController {
         }
     }
 
-    /**
-     * Endpoint to fetch user details by username.
-     *
-     * @param username The username of the user to fetch.
-     * @return ResponseEntity containing the user details or an error message if the user is not found.
-     */
+    
     @GetMapping("/fetch")
     public ResponseEntity<?> fetchUser(@RequestParam String username) {
         Optional<User> user = userService.getUserByUsername(username);

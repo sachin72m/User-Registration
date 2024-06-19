@@ -8,10 +8,7 @@ import java.util.Optional;
 import java.util.List;
 
 
-/**
- * Repository interface for User entity.
- * Extends JpaRepository to provide CRUD operations.
- */
+
 @Repository
 public interface UserRepository extends JpaRepository<User, Long> {
     Optional<User> findByUsername(String username);
